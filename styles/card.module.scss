@@ -1,0 +1,126 @@
+%btn{
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 13px;
+    border-radius: 90px;
+    cursor: pointer;
+    margin-left: 30px;
+    margin-right: 10px;
+}
+
+.card{
+    padding: 31px 0px;
+    width: 336px;
+    height: auto; 
+
+    .hit{
+        text-align: end;
+        img{
+            margin: 0;
+            margin-right: 46px;
+        }
+    }
+
+    img{
+        object-fit: contain;
+        margin: 0px 56px;
+    }
+
+    .rating{
+        margin-top: 8px;
+        margin-bottom: 7px;
+        padding-right: 46px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        small{
+            cursor: pointer;
+            margin-left: 5px;
+            font-weight: 400;
+            font-size: 12px;
+            text-decoration-line: underline;
+            color: #999999;
+        }
+    }
+
+    .title{
+        display: block;
+        margin: 0px 30px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: #2E2E33;
+    }
+
+    .price{
+        margin-top: 7px;
+        margin-bottom: 13px;
+        margin-left: 30px;
+
+        span{
+            font-size: 22px;
+            font-weight: 600;
+            color: #2E2E33;
+        }
+
+        small{
+            margin-left: 5px;
+            color: #999999;
+            font-size: 11px;
+        }
+    }
+
+    .add{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .toCart{
+            @extend %btn;
+            width: 100px;
+            height: 40px;
+            background: #4056A1;
+        }
+    
+        .counter{
+            display: inline-flex;
+            align-items: center;
+    
+            span{
+                color:#2E2E33;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 12px;
+                opacity: 0.8;
+            }
+    
+            b{
+                cursor: pointer;
+                color: #2E2E33;
+                opacity: 0.3;
+    
+                &:not(:last-child){
+                    margin-right: 11px;
+                    
+                }
+                &:not(:first-child){
+                    margin-left: 11px;
+                    
+                }
+            }
+        }
+
+        img{
+            cursor: pointer;
+            margin-right: 20px;
+            margin-left: 0;
+        }
+    }
+}
+
+.added{
+    @extend %btn;
+    width: 175px;
+    height: 40px;
+    background: #00B177;
+}
