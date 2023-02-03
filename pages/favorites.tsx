@@ -9,6 +9,7 @@ const Favorite:React.FC = () => {
     useEffect(() => {  
         setItems(goods);  
     }, [goods])
+ 
 
     return(
         <>
