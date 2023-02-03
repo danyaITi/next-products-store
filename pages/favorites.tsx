@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import useFavoriteStore from "../../store/modules/favorite/store";
-import { ProductFavorite } from "../../types/types";
+import useFavoriteStore from "../store/modules/favorite/store";
+import { ProductFavorite } from "../types/types";
 
 const Favorite:React.FC = () => {
     const goods = useFavoriteStore((state) => state.goods);

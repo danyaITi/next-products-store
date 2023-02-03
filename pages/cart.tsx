@@ -1,5 +1,5 @@
-import { ProductCart } from "../../types/types";
-import  useCartStore  from "../../store/modules/cart/store";
+import { ProductCart } from "../types/types";
+import  useCartStore  from "../store/modules/cart/store";
 import { useEffect, useState } from "react";
 
 const Cart:React.FC = () => {
