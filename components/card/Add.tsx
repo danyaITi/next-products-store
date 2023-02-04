@@ -54,7 +54,7 @@ const Add:React.FC<AddProps> = ({data}) => {
             </div>
 
             {favAdded
-            ? <Image onClick={addToFavorite} src='/favAdded.png' width={40} height={40} alt='added'/>
+            ? <Image onClick={addToFavorite} priority src='/favAdded.png' width={40} height={40} alt='added'/>
             :  <Image onClick={addToFavorite} src='/icon.png' width={16} height={14} alt='to favorites'/>
             }
 

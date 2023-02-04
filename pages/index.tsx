@@ -1,6 +1,5 @@
 import { GetStaticProps } from "next";
 import Card from "../components/card";
-import Header from "../components/header";
 import { Goods } from "../types/types";
 
 interface ResponseTypeProps {
