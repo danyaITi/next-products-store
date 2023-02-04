@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { ProductCart } from '../../../types/types';
-import { persist, createJSONStorage } from "zustand/middleware";
+import { persist, createJSONStorage, devtools } from "zustand/middleware";
 
 interface CartState {
     goods:ProductCart[] | []
@@ -8,7 +8,7 @@ interface CartState {
 }
 
 const useCartStore = create<CartState>()(
-	persist(
+	devtools(persist(
 		(set) => ({
 			goods: [],
 			addProduct: (item:ProductCart) => set((state) => (
@@ -26,7 +26,7 @@ const useCartStore = create<CartState>()(
             storage: createJSONStorage(() => sessionStorage),
         }
 	)
-)
+))
 
 
 export default useCartStore

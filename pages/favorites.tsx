@@ -3,12 +3,12 @@ import useFavoriteStore from "../store/modules/favorite/store";
 import { ProductFavorite } from "../types/types";
 
 const Favorite:React.FC = () => {
-    const goods = useFavoriteStore((state) => state.goods);
+    const favorites = useFavoriteStore((state) => state.favorites);
     const [items, setItems] = useState<ProductFavorite[]>([]);
 
     useEffect(() => {  
-        setItems(goods);  
-    }, [goods])
+        setItems(favorites);  
+    }, [favorites])
  
 
     return(

@@ -13,7 +13,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
     if(!data.length){
         return {
-            notFound: true
+            notFound: true,
         }
     }
     
@@ -23,7 +23,7 @@ export const getStaticProps: GetStaticProps = async () => {
 }
 
 
-const Main:React.FC<ResponseTypeProps> = ({goods}) => {
+const Main:React.FC<ResponseTypeProps> =  ({goods}) => {
 
     return(
         <>

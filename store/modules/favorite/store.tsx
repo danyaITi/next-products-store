@@ -1,20 +1,20 @@
 import {create} from "zustand";
-import { persist, createJSONStorage } from "zustand/middleware";
+import { persist, createJSONStorage, devtools } from "zustand/middleware";
 import { ProductFavorite } from '../../../types/types';
 
 interface FavoriteState {
-    goods:ProductFavorite[] | []
+    favorites:ProductFavorite[] | []
 	addFavorite: (item:ProductFavorite) => void
 }
 
 const useFavoriteStore = create<FavoriteState>()(
-    persist(
+    devtools(persist(
         (set) => ({
-            goods: [],
+            favorites: [],
             addFavorite: (item:ProductFavorite) => set((state) => (
                 {
-                    goods: [
-                        ...state.goods, 
+                    favorites: [
+                        ...state.favorites, 
                         {...item}
                     ]
                     
@@ -26,6 +26,6 @@ const useFavoriteStore = create<FavoriteState>()(
             storage: createJSONStorage(() => sessionStorage)
         }
     )
-)
+))
 
 export default useFavoriteStore
