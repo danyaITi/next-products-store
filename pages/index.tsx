@@ -8,7 +8,11 @@ interface ResponseTypeProps {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-    const resp = await fetch('https://fakestoreapi.com/products');
+    const resp = await fetch('https://fakestoreapi.com/products', {
+        next: {
+            revalidate:60
+        }
+    });
     const data:Goods[] = await resp.json();
 
     if(!data.length){
