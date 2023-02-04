@@ -31,7 +31,6 @@ const Main:React.FC<ResponseTypeProps> =  ({goods}) => {
 
     return(
         <>
-            <Header/>
             <div className='goods-grid'>
                 {goods.map((item)=>(
                     <div className='goods-flex' key={item.id}>
