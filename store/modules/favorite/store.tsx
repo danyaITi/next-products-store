@@ -3,7 +3,7 @@ import { persist, createJSONStorage, devtools } from "zustand/middleware";
 import { ProductFavorite } from '../../../types/types';
 
 interface FavoriteState {
-    favorites:ProductFavorite[] | []
+    favorites:ProductFavorite[]
 	addFavorite: (item:ProductFavorite) => void
 }
 
@@ -15,7 +15,8 @@ const useFavoriteStore = create<FavoriteState>()(
                 {
                     favorites: [
                         ...state.favorites, 
-                        {...item}
+                        {...item},
+                        
                     ]
                     
                 }

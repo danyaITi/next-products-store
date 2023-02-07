@@ -13,3 +13,5 @@ export type Goods = {
 export type ProductCart = Omit<Goods, 'rating'>;
 
 export type ProductFavorite = Omit<Goods, 'rating' | 'description'>;
+
+

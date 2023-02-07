@@ -1,0 +1,22 @@
+.card{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    span{
+        margin-left: 20px;
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+}
+
+.desc { 
+    max-width: 700px;
+    margin-top: 10px;
+}
+
+.titlePage{
+    text-align: center;
+}

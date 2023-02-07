@@ -1,9 +1,9 @@
 import styles from '../../styles/card.module.scss';
-import Image from "next/image";
 import { ProductCart } from '../../types/types';
 import  useCartStore  from '../../store/modules/cart/store';
 import useFavoriteStore from '../../store/modules/favorite/store';
 import { useState } from 'react';
+import Image from 'next/image';
 
 interface AddProps {
     data: ProductCart
@@ -11,9 +11,11 @@ interface AddProps {
  
 const Add:React.FC<AddProps> = ({data}) => {
     const addProduct = useCartStore((state) => state.addProduct);
+
     const addFavorite = useFavoriteStore((state) => state.addFavorite);
 
     const [cartAdded, setCartAdded] = useState(false);
+
     const [favAdded, setFavAdded] = useState(false);
 
     const obj = {
@@ -21,7 +23,7 @@ const Add:React.FC<AddProps> = ({data}) => {
         description: data.description,
         image: data.image,
         price: data.price,
-        title: data.title
+        title: data.title,
     };
 
     const addToCart = () => {
@@ -54,11 +56,9 @@ const Add:React.FC<AddProps> = ({data}) => {
             </div>
 
             {favAdded
-            ? <Image onClick={addToFavorite} priority src='/favAdded.png' width={40} height={40} alt='added'/>
-            :  <Image onClick={addToFavorite} src='/icon.png' width={16} height={14} alt='to favorites'/>
+                ? <Image src='/favAdded.png' width={40} height={40} alt='added'/>
+                : <Image onClick={addToFavorite} src='/icon.png' width={16} height={14} alt='to favorites'/>
             }
-
-            
         </div>
     )
 }
