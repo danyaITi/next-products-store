@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from '../../styles/card.module.scss';
+import { converter } from "../../utils/converter";
 import Add from "./Add";
 import Hit from "./Hit";
 import Rating from "./Rating";
@@ -37,7 +38,7 @@ const Card:React.FC<CardProps> = ({image,title,price, rating, description, id}) 
 
             <div className={styles.price}>
                 <span>
-                    {Math.round(price*70)} &#8381; 
+                    {converter(price)} &#8381; 
                 </span>
                 <small>/шт</small>
             </div>
